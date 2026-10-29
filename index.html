@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rudra Kumar | CS & AI Student | Aspiring Software Engineer</title>
+  <meta name="description" content="Personal developer portfolio of Rudra Kumar — Computer Science and AI student passionate about algorithms, machine learning, robotics, and software engineering.">
+  <meta name="author" content="Rudra Kumar">
+  <meta name="keywords" content="Rudra Kumar, Computer Science, Artificial Intelligence, Portfolio, Software Engineer, C++, Python, Arduino, Algorithms">
+
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:title" content="Rudra Kumar | Developer Portfolio">
+  <meta property="og:description" content="Computer Science & AI Student passionate about algorithms, embedded systems, and software engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR_GITHUB_USERNAME.github.io/">
+  <meta property="og:image" content="./assets/images/avatar.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rudra Kumar | Developer Portfolio">
+  <meta name="twitter:description" content="Computer Science & AI Student passionate about algorithms, embedded systems, and software engineering.">
+  <meta name="twitter:image" content="./assets/images/avatar.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Accessible Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Interactive Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Notification Toast Container -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="header" id="header">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Rudra Kumar - Home">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Rudra<span class="logo-accent">.dev</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#github" class="nav-link">GitHub</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- GitHub External Button -->
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-github" aria-label="Visit Rudra's GitHub Profile (Placeholder)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span class="btn-text">GitHub</span>
+        </a>
+
+        <!-- Hamburger Menu Toggle (Mobile) -->
+        <button id="menu-toggle" class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT WRAPPER -->
+  <main id="main-content">
+
+    <!-- ==================== SECTION: HERO ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>Computer Science &amp; AI Student</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Rudra Kumar</span>.
+          </h1>
+
+          <p class="hero-headline">
+            Building, Learning, and Exploring the World of Computer Science and AI.
+          </p>
+
+          <p class="hero-description">
+            I'm a Computer Science and AI student passionate about solving problems, understanding algorithms, and building practical projects. I enjoy exploring technology and turning ideas into working solutions.
+          </p>
+
+          <!-- Call to action buttons -->
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore My Projects</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="View Rudra Kumar's GitHub Profile">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>View GitHub</span>
+            </a>
+          </div>
+
+          <!-- Hero Tech Snippet Pills -->
+          <div class="hero-tech-pills">
+            <span class="tech-pill">C / C++</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Algorithms</span>
+            <span class="tech-pill">Arduino</span>
+            <span class="tech-pill">AI Foundations</span>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Illustration -->
+        <div class="hero-visual">
+          <div class="avatar-card glass-panel">
+            <div class="avatar-frame">
+              <img src="./assets/images/avatar.svg" alt="Rudra Kumar developer avatar graphic" class="hero-avatar" width="360" height="360" loading="eager">
+            </div>
+            <div class="avatar-tag-bottom">
+              <span class="indicator-online"></span>
+              <span>Always learning &amp; engineering</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down to About section">
+        <span class="scroll-label">Scroll to explore</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==================== SECTION: ABOUT ME ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-kicker">Get To Know Me</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            An authentic look into my journey as a computer science student, my curiosity for algorithms, and my dedication to engineering practical solutions.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Main Narrative Intro -->
+          <div class="about-narrative glass-panel">
+            <h3 class="narrative-heading">Curiosity, Code &amp; Continuous Learning</h3>
+            <p>
+              I am a BTech student specializing in <strong>Computer Science and Artificial Intelligence</strong>. My fascination with technology began with a simple desire: to understand how computers think, how complex data structures solve seemingly impossible problems in fractions of a second, and how hardware connects with software to interact with the physical world.
+            </p>
+            <p>
+              Whether I am analyzing asymptotic time complexities in C++, writing Python scripts for machine learning basics, or wiring up sensors and microcontrollers on a breadboard, I find fulfillment in breaking down challenging puzzles and turning conceptual logic into tangible implementations.
+            </p>
+            <p>
+              I believe in learning through hands-on experience, participating actively in competitive programming exercises, and building open-source projects that solve real problems.
+            </p>
+
+            <div class="about-stats-row">
+              <div class="stat-box">
+                <span class="stat-number">BTech</span>
+                <span class="stat-label">Computer Science &amp; AI</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">6+</span>
+                <span class="stat-label">Core Languages &amp; Tools</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Committed to Growth</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Structured Info Cards -->
+          <div class="about-cards-container">
+            <!-- Card 1: Current Focus -->
+            <div class="info-card glass-panel">
+              <div class="card-icon-wrapper cyan">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Current Focus</h4>
+                <p class="card-desc">
+                  Strengthening foundational Data Structures and Algorithms in C++ and Python, mastering problem-solving patterns, and expanding core computer science concepts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2: Technical Interests -->
+            <div class="info-card glass-panel">
+              <div class="card-icon-wrapper indigo">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Technical Interests</h4>
+                <p class="card-desc">
+                  Artificial Intelligence, Machine Learning fundamentals, Competitive Programming (ICPC/code contests), Open Source development, and Robotics.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3: Learning Goals -->
+            <div class="info-card glass-panel">
+              <div class="card-icon-wrapper purple">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Learning Goals</h4>
+                <p class="card-desc">
+                  Advancing toward full-stack web development, mastering neural network architectures, and collaborating on meaningful open-source software repositories.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4: Development Philosophy -->
+            <div class="info-card glass-panel">
+              <div class="card-icon-wrapper emerald">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div class="card-content">
+                <h4 class="card-title">Development Philosophy</h4>
+                <p class="card-desc">
+                  Writing clean, well-reasoned code with modularity in mind. Embracing the debugging process as a learning opportunity and building through iterative prototyping.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: TECHNICAL SKILLS ==================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-kicker">Capabilities &amp; Tools</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">
+            An organized overview of the programming languages, development tools, and engineering concepts I work with.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon cyan">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Programming</h3>
+            </div>
+            <p class="category-desc">Core languages used for problem-solving, algorithmic programming, and scripting.</p>
+            <div class="skills-chips">
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">C</span>
+                <span class="skill-level">Fundamentals</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">C++</span>
+                <span class="skill-level">DSA &amp; OOP</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Python</span>
+                <span class="skill-level">AI &amp; Scripting</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-level">Interactive Web</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Web Development -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon indigo">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Web Development</h3>
+            </div>
+            <p class="category-desc">Crafting responsive, accessible, and structured user interfaces for the web.</p>
+            <div class="skills-chips">
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-level">Semantic Markup</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-level">Flex/Grid &amp; Responsive</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-level">DOM &amp; Async</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Web Standards</span>
+                <span class="skill-level">Accessibility</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Developer Tools -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon purple">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Tools &amp; Environment</h3>
+            </div>
+            <p class="category-desc">Development workflows, editors, and version control tools used daily.</p>
+            <div class="skills-chips">
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Git</span>
+                <span class="skill-level">Version Control</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">GitHub</span>
+                <span class="skill-level">Collaboration</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">VS Code</span>
+                <span class="skill-level">Primary Editor</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Linux / CLI</span>
+                <span class="skill-level">Shell &amp; Environment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Hardware and Projects -->
+          <div class="skill-category glass-panel">
+            <div class="category-header">
+              <div class="category-icon emerald">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Hardware &amp; Projects</h3>
+            </div>
+            <p class="category-desc">Hands-on experience bridging software logic with sensors and physical actuators.</p>
+            <div class="skills-chips">
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Arduino</span>
+                <span class="skill-level">Microcontrollers</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Embedded Systems</span>
+                <span class="skill-level">Interfacing</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Sensors (Gas / Sonar)</span>
+                <span class="skill-level">Analog &amp; Digital</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Actuators &amp; Servos</span>
+                <span class="skill-level">Robotics Control</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: Concepts & Problem Solving -->
+          <div class="skill-category glass-panel full-width-span">
+            <div class="category-header">
+              <div class="category-icon amber">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Core CS Concepts</h3>
+            </div>
+            <p class="category-desc">Theoretical foundations and analytical thinking driving software engineering practices.</p>
+            <div class="skills-chips horizontal-wrap">
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Data Structures (Arrays, Lists, Trees, Graphs)</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Algorithms &amp; Time/Space Complexity</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Competitive Programming Fundamentals</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Object-Oriented Programming (OOP)</span>
+              </div>
+              <div class="skill-chip">
+                <span class="skill-indicator"></span>
+                <span class="skill-name">Introductory AI / Machine Learning</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="skills-note">
+          <p>
+            <span class="note-icon">💡</span>
+            <em>Note: As an undergraduate student, I represent these skills transparently as active learning areas and practical project experiences rather than senior-level mastery.</em>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: FEATURED PROJECTS ==================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-kicker">Hands-On Creations</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">
+            A showcase of my robotics, embedded systems, and algorithmic software projects. Each project represents practical experimentation and problem-solving.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Arduino LPG Gas Detection -->
+          <article class="project-card glass-panel" id="project-lpg">
+            <div class="project-media">
+              <img src="./assets/images/project-lpg.svg" alt="Diagram showing Arduino LPG Gas Detection and Automatic Valve Control System prototype" width="600" height="340" loading="lazy">
+              <span class="project-badge prototype-badge">Educational Prototype</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">Embedded Systems &bull; IoT</span>
+              </div>
+              <h3 class="project-title">Arduino LPG Gas Detection &amp; Automatic Valve Control System</h3>
+              <p class="project-description">
+                A prototype designed to detect LPG leakage using a gas sensor, trigger an audible/visual alarm, and control a valve through a microcontroller to prevent hazardous accumulation.
+              </p>
+              
+              <!-- Educational Note Callout -->
+              <div class="project-disclaimer">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>Educational safety prototype designed for academic demonstration and learning, not a commercial/certified device.</span>
+              </div>
+
+              <!-- Tech stack tags -->
+              <div class="project-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">MQ-6 Sensor</span>
+                <span class="tag">Servo Motor</span>
+                <span class="tag">Buzzer</span>
+                <span class="tag">Embedded Systems</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-actions">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/arduino-lpg-gas-detection" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Arduino LPG project source code on GitHub (Placeholder)">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repository (Placeholder)</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-ghost project-details-btn" data-project="lpg">
+                  <span>View Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Arduino-Based Garbage Collection Robot -->
+          <article class="project-card glass-panel" id="project-robot">
+            <div class="project-media">
+              <img src="./assets/images/project-robot.svg" alt="Illustration of Arduino-based garbage collection robot rover" width="600" height="340" loading="lazy">
+              <span class="project-badge robotics-badge">Robotics Prototype</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">Robotics &bull; Automation</span>
+              </div>
+              <h3 class="project-title">Arduino-Based Garbage Collection Robot</h3>
+              <p class="project-description">
+                A robotics project exploring automated waste collection and embedded-system control. Combines obstacle avoidance algorithms, sensor telemetry, and motor drivers on an Arduino core.
+              </p>
+
+              <div class="project-disclaimer">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>Academic exploration in autonomous movement, mechanized collection, and real-time microcontroller sensing.</span>
+              </div>
+
+              <!-- Tech stack tags -->
+              <div class="project-tags">
+                <span class="tag">Arduino</span>
+                <span class="tag">Robotics</span>
+                <span class="tag">Sensors</span>
+                <span class="tag">Motor Drivers</span>
+                <span class="tag">Embedded C++</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-actions">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/arduino-garbage-collection-robot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Garbage Collection Robot repository on GitHub (Placeholder)">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repository (Placeholder)</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-ghost project-details-btn" data-project="robot">
+                  <span>View Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Programming and Algorithm Projects -->
+          <article class="project-card glass-panel" id="project-dsa">
+            <div class="project-media">
+              <img src="./assets/images/project-dsa.svg" alt="Illustration of programming and algorithm implementations with binary trees and code editor" width="600" height="340" loading="lazy">
+              <span class="project-badge algorithms-badge">Algorithms &amp; DSA</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">Software &bull; Problem Solving</span>
+              </div>
+              <h3 class="project-title">Programming and Algorithm Projects</h3>
+              <p class="project-description">
+                A collection of programming exercises, data structure implementations, and algorithmic problem-solving in C, C++, and Python. Focuses on complexity analysis, recursion, sorting, and graph traversals.
+              </p>
+
+              <div class="project-disclaimer">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>Actively curated repository of competitive programming problem solutions, benchmarks, and clean code paradigms.</span>
+              </div>
+
+              <!-- Tech stack tags -->
+              <div class="project-tags">
+                <span class="tag">C</span>
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Algorithms</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-actions">
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/algorithms-problem-solving" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline" aria-label="View Algorithms repository on GitHub (Placeholder)">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>Repository (Placeholder)</span>
+                </a>
+                <button type="button" class="btn btn-sm btn-ghost project-details-btn" data-project="dsa">
+                  <span>View Details</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Section Callout to Add More Projects -->
+        <div class="projects-footer-cta">
+          <p>Want to see more code or explore my latest commits?</p>
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>Explore All Repositories on GitHub</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: EDUCATION & LEARNING ==================== -->
+    <section class="section education-section" id="education">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-kicker">Academic Foundation</span>
+          <h2 class="section-title">Education &amp; Learning</h2>
+          <p class="section-subtitle">
+            My formal engineering degree coursework alongside self-directed independent technical studies.
+          </p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Degree Card -->
+          <div class="education-card glass-panel primary-academic-card">
+            <div class="edu-badge">Degree Program</div>
+            <div class="edu-header">
+              <div class="edu-icon-box">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="edu-title-group">
+                <h3 class="edu-degree">Bachelor of Technology (BTech)</h3>
+                <h4 class="edu-major gradient-text">Computer Science and Artificial Intelligence</h4>
+                <p class="edu-status">Undergraduate Engineering Journey</p>
+              </div>
+            </div>
+
+            <div class="edu-body">
+              <h5 class="edu-subheading">Core Areas of Study &amp; Coursework:</h5>
+              <ul class="edu-course-list">
+                <li>
+                  <span class="course-bullet"></span>
+                  <div>
+                    <strong>Data Structures &amp; Algorithm Analysis</strong>
+                    <p>Arrays, Linked Lists, Stacks, Queues, Binary Trees, Searching, and Sorting Algorithms.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="course-bullet"></span>
+                  <div>
+                    <strong>Object-Oriented Programming</strong>
+                    <p>Abstraction, Encapsulation, Inheritance, and Polymorphism using C++ and Python.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="course-bullet"></span>
+                  <div>
+                    <strong>Artificial Intelligence Foundations</strong>
+                    <p>Introductory search algorithms, state spaces, and statistical machine learning concepts.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="course-bullet"></span>
+                  <div>
+                    <strong>Computer Organization &amp; Digital Logic</strong>
+                    <p>Processor architectures, memory hierarchies, logic gates, and low-level computation.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="course-bullet"></span>
+                  <div>
+                    <strong>Discrete Mathematics</strong>
+                    <p>Set theory, propositional logic, graph theory, combinatorics, and computational proof methods.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="edu-note">
+              <small><em>Specific university details and formal graduation year can be customized in the template once updated by the author.</em></small>
+            </div>
+          </div>
+
+          <!-- Independent Learning Column -->
+          <div class="education-card glass-panel independent-learning-card">
+            <div class="edu-badge alt-badge">Self-Directed</div>
+            <div class="edu-header">
+              <div class="edu-icon-box indigo">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <div class="edu-title-group">
+                <h3 class="edu-degree">Continuous Self-Learning</h3>
+                <h4 class="edu-major">Independent Technical Exploration</h4>
+                <p class="edu-status">Hands-On Practice &amp; Projects</p>
+              </div>
+            </div>
+
+            <div class="edu-body">
+              <div class="self-learning-item">
+                <h5 class="self-learning-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  Algorithmic Problem-Solving &amp; Competitive Programming
+                </h5>
+                <p>
+                  Actively practicing problem solving on platforms such as LeetCode, Codeforces, and HackerRank to internalize dynamic programming, graph theory, and mathematical optimization.
+                </p>
+              </div>
+
+              <div class="self-learning-item">
+                <h5 class="self-learning-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  Hardware Prototyping with Arduino
+                </h5>
+                <p>
+                  Exploring embedded hardware development, microcontroller pinouts, sensor signal acquisition, and mechanical actuator logic for robotics and smart automation systems.
+                </p>
+              </div>
+
+              <div class="self-learning-item">
+                <h5 class="self-learning-title">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  Web Development &amp; Modern Tooling
+                </h5>
+                <p>
+                  Learning modern frontend engineering principles, responsive UI architecture, semantic web standards, and version-controlled Git workflows.
+                </p>
+              </div>
+            </div>
+
+            <div class="learning-quote">
+              <p>“The best way to understand computer science is to build, debug, and continuously experiment.”</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: GITHUB ==================== -->
+    <section class="section github-section" id="github">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-kicker">Open Source &amp; Code</span>
+          <h2 class="section-title">GitHub Showcase</h2>
+          <p class="section-subtitle">
+            I believe in learning in public and maintaining clean, documented code repositories for my academic and personal projects.
+          </p>
+        </div>
+
+        <div class="github-container glass-panel">
+          <div class="github-header-card">
+            <div class="github-profile-preview">
+              <div class="github-avatar-circle">
+                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </div>
+              <div class="github-profile-meta">
+                <h3 class="github-name">Rudra Kumar</h3>
+                <p class="github-handle">
+                  <code>@YOUR_GITHUB_USERNAME</code>
+                  <span class="badge-placeholder">Placeholder</span>
+                </p>
+                <p class="github-bio">Computer Science &amp; AI Student | Problem Solver | Arduino Enthusiast</p>
+              </div>
+            </div>
+
+            <div class="github-cta-group">
+              <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Open GitHub Profile in new tab">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>Follow on GitHub</span>
+              </a>
+              <button type="button" class="btn btn-outline copy-github-btn" data-clipboard="https://github.com/YOUR_GITHUB_USERNAME" title="Copy GitHub profile URL">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy URL</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Highlighted Repositories Showcase (Reliable Static Structure) -->
+          <h4 class="showcase-title">Highlighted Repository Showcase</h4>
+          <div class="repo-grid">
+
+            <!-- Repo 1 -->
+            <div class="repo-card">
+              <div class="repo-card-top">
+                <svg class="repo-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/arduino-lpg-gas-detection" target="_blank" rel="noopener noreferrer" class="repo-name">
+                  arduino-lpg-gas-detection
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Embedded C++ Arduino source code and schematics for LPG gas leakage sensing and automated servo shut-off valve control.
+              </p>
+              <div class="repo-footer">
+                <span class="repo-lang"><span class="lang-color cpp"></span> C++ / Arduino</span>
+                <span class="repo-meta-tag">Educational</span>
+              </div>
+            </div>
+
+            <!-- Repo 2 -->
+            <div class="repo-card">
+              <div class="repo-card-top">
+                <svg class="repo-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/garbage-collection-robot" target="_blank" rel="noopener noreferrer" class="repo-name">
+                  garbage-collection-robot
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Obstacle avoidance routines, sensor polling logic, and motor controller code for an automated waste retrieval rover.
+              </p>
+              <div class="repo-footer">
+                <span class="repo-lang"><span class="lang-color arduino"></span> C++ / Robotics</span>
+                <span class="repo-meta-tag">Robotics</span>
+              </div>
+            </div>
+
+            <!-- Repo 3 -->
+            <div class="repo-card">
+              <div class="repo-card-top">
+                <svg class="repo-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <a href="https://github.com/YOUR_GITHUB_USERNAME/algorithms-problem-solving" target="_blank" rel="noopener noreferrer" class="repo-name">
+                  algorithms-problem-solving
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Curated algorithmic problem solutions in C, C++, and Python covering trees, graphs, sorting, and dynamic programming.
+              </p>
+              <div class="repo-footer">
+                <span class="repo-lang"><span class="lang-color python"></span> Python / C++</span>
+                <span class="repo-meta-tag">DSA</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Offline & API Safety Notice -->
+          <div class="github-fallback-notice">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <p>
+              <strong>Reliability First:</strong> This section is statically structured to ensure the website loads instantaneously without breaking if third-party GitHub APIs encounter rate limits or network issues. Replace <code>YOUR_GITHUB_USERNAME</code> with your handle in <code>index.html</code>.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SECTION: CONTACT ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-kicker">Connect &amp; Collaborate</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">
+            I am always excited to discuss computer science concepts, open-source projects, and collaborative engineering opportunities.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-column">
+            
+            <div class="contact-card glass-panel">
+              <h3 class="contact-card-title">Let's Build Together</h3>
+              <p class="contact-card-text">
+                Whether you're working on an exciting algorithmic problem, building a student tech initiative, or looking for an enthusiastic Computer Science &amp; AI peer, feel free to reach out!
+              </p>
+
+              <div class="contact-links-list">
+                
+                <!-- Email Link -->
+                <div class="contact-link-item">
+                  <div class="contact-link-icon cyan">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="contact-link-details">
+                    <span class="contact-link-label">Direct Email</span>
+                    <a href="mailto:YOUR_EMAIL@example.com" class="contact-link-value">
+                      YOUR_EMAIL@example.com
+                    </a>
+                  </div>
+                  <button type="button" class="copy-inline-btn" data-clipboard="YOUR_EMAIL@example.com" title="Copy Email Address" aria-label="Copy Email Address">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- GitHub Link -->
+                <div class="contact-link-item">
+                  <div class="contact-link-icon purple">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </div>
+                  <div class="contact-link-details">
+                    <span class="contact-link-label">GitHub</span>
+                    <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="contact-link-value">
+                      github.com/YOUR_GITHUB_USERNAME
+                    </a>
+                  </div>
+                </div>
+
+                <!-- LinkedIn Link -->
+                <div class="contact-link-item">
+                  <div class="contact-link-icon indigo">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </div>
+                  <div class="contact-link-details">
+                    <span class="contact-link-label">LinkedIn</span>
+                    <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener noreferrer" class="contact-link-value">
+                      linkedin.com/in/YOUR_LINKEDIN_USERNAME
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="collaboration-callout">
+                <span class="callout-indicator"></span>
+                <span>Open for open-source contributions &amp; technical peer discussions.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form (Directly functional with mailto fallback & clean feedback) -->
+          <div class="contact-form-column">
+            <div class="form-wrapper glass-panel">
+              <div class="form-header">
+                <h3 class="form-title">Send a Message</h3>
+                <p class="form-desc">
+                  Fill out this form to connect. It triggers your email client or can be connected to a free form backend.
+                </p>
+              </div>
+
+              <form id="contact-form" class="contact-form" novalidate>
+                
+                <div class="form-group">
+                  <label for="user-name" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g. Alex Smith" required autocomplete="name">
+                  <span class="error-msg" id="name-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="user-email" class="form-label">Your Email <span class="required">*</span></label>
+                  <input type="email" id="user-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+                  <span class="error-msg" id="email-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="user-subject" class="form-label">Subject <span class="required">*</span></label>
+                  <input type="text" id="user-subject" name="subject" class="form-input" placeholder="e.g. Collaboration on Open Source Project" required>
+                  <span class="error-msg" id="subject-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="user-message" class="form-label">Message <span class="required">*</span></label>
+                  <textarea id="user-message" name="message" class="form-textarea" rows="4" placeholder="Hello Rudra, I came across your portfolio and wanted to reach out regarding..." required></textarea>
+                  <span class="error-msg" id="message-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                    <span>Send Message</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Backend Explanation Callout -->
+                <div class="form-backend-hint">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>To enable backend mail forwarding without a server, connect to <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a> or <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a>. Full instructions are in the <code>README.md</code>.</span>
+                </div>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span class="logo-text">Rudra<span class="logo-accent">.dev</span></span>
+          </a>
+          <p class="footer-tagline">
+            Computer Science and Artificial Intelligence Student | Aspiring Software Engineer.
+          </p>
+        </div>
+
+        <!-- Quick Nav Links -->
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <span class="footer-nav-title">Quick Links</span>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Social Links in Footer -->
+        <div class="footer-social">
+          <span class="footer-nav-title">Connect</span>
+          <div class="social-icons">
+            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:YOUR_EMAIL@example.com" class="social-icon-btn" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; <span id="current-year">2026</span> Rudra Kumar. All rights reserved.
+        </p>
+        <p class="footer-credit">
+          Designed and built with curiosity.
+        </p>
+        <!-- Scroll to Top Button -->
+        <a href="#hero" class="back-to-top" aria-label="Scroll back to top">
+          <span>Back to top</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-overlay" tabindex="-1"></div>
+    <div class="modal-dialog glass-panel" role="document">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Project Details</h3>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close project modal">&times;</button>
+      </div>
+      <div id="modal-content" class="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" id="modal-dismiss-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
+</body>
+</html>
+

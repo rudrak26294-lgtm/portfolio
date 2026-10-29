@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgLpg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a101d"/>
+      <stop offset="100%" stop-color="#141e33"/>
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <filter id="glowLpg" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="340" fill="url(#bgLpg)"/>
+
+  <!-- Circuit Grid Lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="340"/>
+    <line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="300" y1="0" x2="300" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="500" y1="0" x2="500" y2="340"/>
+  </g>
+
+  <!-- Title Badge / Sub-label in Graphic -->
+  <g transform="translate(30, 25)">
+    <rect width="180" height="26" rx="13" fill="#1e293b" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="15" cy="13" r="4" fill="#38bdf8"/>
+    <text x="28" y="17" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.5">HARDWARE PROTOTYPE</text>
+  </g>
+
+  <!-- MQ-6 Sensor Module Block -->
+  <g transform="translate(60, 95)">
+    <rect width="120" height="150" rx="12" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="25" y="20" width="70" height="70" rx="35" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5" filter="url(#glowLpg)"/>
+    <circle cx="60" cy="55" r="24" fill="#334155" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="60" y="58" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="bold" text-anchor="middle">MQ-6</text>
+    <text x="60" y="112" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">LPG Sensor</text>
+    <text x="60" y="130" fill="#64748b" font-family="monospace" font-size="10" text-anchor="middle">Analog / Digital</text>
+    <!-- Pins -->
+    <circle cx="35" cy="150" r="3" fill="#cbd5e1"/>
+    <circle cx="50" cy="150" r="3" fill="#cbd5e1"/>
+    <circle cx="70" cy="150" r="3" fill="#cbd5e1"/>
+    <circle cx="85" cy="150" r="3" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Connecting Bus Lines (Sensor -> MCU) -->
+  <path d="M180 170 L240 170" stroke="#38bdf8" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="238,166 248,170 238,174" fill="#38bdf8"/>
+
+  <!-- Microcontroller / Arduino Core -->
+  <g transform="translate(240, 85)">
+    <rect width="140" height="170" rx="14" fill="#005C8A" stroke="#00979C" stroke-width="2"/>
+    <rect x="20" y="30" width="100" height="70" rx="6" fill="#090d16" stroke="#38bdf8" stroke-width="1"/>
+    <!-- MCU chip -->
+    <rect x="35" y="42" width="70" height="46" rx="4" fill="#1e293b"/>
+    <text x="70" y="62" fill="#38bdf8" font-family="monospace" font-size="9" font-weight="bold" text-anchor="middle">ATmega328P</text>
+    <text x="70" y="76" fill="#94a3b8" font-family="monospace" font-size="8" text-anchor="middle">16 MHz</text>
+    
+    <text x="70" y="125" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Arduino Unit</text>
+    <text x="70" y="145" fill="#a5f3fc" font-family="monospace" font-size="10" text-anchor="middle">Logic &amp; Threshold</text>
+  </g>
+
+  <!-- Connecting Bus Lines (MCU -> Actuators) -->
+  <path d="M380 140 L440 140" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="438,136 448,140 438,144" fill="#f59e0b"/>
+  
+  <path d="M380 200 L440 200" stroke="#ef4444" stroke-width="3" stroke-dasharray="5,5"/>
+  <polygon points="438,196 448,200 438,204" fill="#ef4444"/>
+
+  <!-- Actuators: Servo Valve + Buzzer -->
+  <g transform="translate(440, 85)">
+    <!-- Servo Valve Block -->
+    <rect width="125" height="70" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.8"/>
+    <circle cx="28" cy="35" r="14" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <line x1="28" y1="35" x2="38" y2="28" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="54" y="32" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Servo Valve</text>
+    <text x="54" y="48" fill="#f59e0b" font-family="monospace" font-size="9">Auto Shut-off</text>
+  </g>
+
+  <g transform="translate(440, 180)">
+    <!-- Alarm Buzzer / LED Block -->
+    <rect width="125" height="70" rx="10" fill="#0f172a" stroke="#ef4444" stroke-width="1.8"/>
+    <circle cx="28" cy="35" r="14" fill="#7f1d1d" stroke="#ef4444" stroke-width="1.5" filter="url(#glowLpg)"/>
+    <polygon points="25,28 34,35 25,42" fill="#ef4444"/>
+    <text x="54" y="32" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="bold">Buzzer &amp; LED</text>
+    <text x="54" y="48" fill="#f87171" font-family="monospace" font-size="9">Audio/Visual Alert</text>
+  </g>
+
+  <!-- Status Bar at bottom -->
+  <g transform="translate(30, 285)">
+    <rect width="540" height="32" rx="6" fill="#0b111e" stroke="#334155" stroke-width="1"/>
+    <circle cx="20" cy="16" r="4" fill="#10b981"/>
+    <text x="35" y="20" fill="#94a3b8" font-family="monospace" font-size="11">Status: Educational safety prototype | Auto valve shut-off on gas threshold</text>
+  </g>
+</svg>
+
